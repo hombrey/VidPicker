@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title> 
+    <meta name="description" content"">
+    <meta name="author" content="Hombrey">
+    <link rel="stylesheet" href="./src/vidPicker/styles.css">
+</head>
+
+<body id="myBody">
+    <img class="fullPage" id="backgroundX" src="./src/vidPicker/img/BG0.png">
+    <video src="./src/vidPicker/img/init.mp4" id="vidPicked" onmouseover="initVidPlayer(this.id)"></video>
+    <div id="directory" style="display:none">/hdd/9_KIDS/A_hi/</div>
+    <div class="selector">
+    <select id="filePicker" onchange="switchVid(this.id,directory.id)" size=10>  <!--Call run() function-->
+        <option>1_Gmorning_mMoose.mp4</option>
+        <option>1_Hello-Actions.mp4</option>
+        <option>1_HelloHowAreYou.mp4</option>
+        <option>1_Hello_HowAreYou_Kiboomers.mp4</option>
+        <option>1_ShakeHandsHello_Mapple.mp4</option>
+        <option>1_WhatsYourNameSuperSimple.mp4</option>
+        <option>1_gMorning_sWalrus.mp4</option>
+        <option>8_IfYouReAKid.mp4</option>
+    </select>
+    </div>
+</body> 
+    <script src="./src/vidPicker/functions.js"></script> 
+</html> 
