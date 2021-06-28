@@ -51,6 +51,7 @@ function evalKeyDown(evnt) {
                         else if (clickedVid.webkitRequestFullScreen) { clickedVid.webkitRequestFullScreen(); }
                    }; //if (event.ctrlKey)
                    break; // 'f'
+        case 86 : document.getElementById("filePicker").focus(); break; //key: v -- focus on video picker frame
         case 27 : parent.focus(); break; //key: Escape --This gives control back to reveal.js when in an iframe 
         default : return;
     } //switch (keyPressed)
@@ -58,9 +59,10 @@ function evalKeyDown(evnt) {
 //}}}event listeners
 
 //{{{initializations
-//make sure elements are loaded before proceeding
 
 function initWin() {
+document.getElementById('backgroundX').onload = function () { //wait for element before loading
+setTimeout (function() { //set delay before calculating drawable parameters
     //Get a reference to the canvas
     bgX = document.getElementById('backgroundX');
     clickedVid = document.getElementById("vidPicked");
@@ -70,6 +72,8 @@ function initWin() {
 
     document.getElementById("filePicker").focus();
 
+}, 3);//setTimeOut (function()
+};//document.getElementById(' ... wait for element before loading
 } //function init()
 
 //}}}window init

@@ -5,7 +5,7 @@ echo $1 > options.txt
 input="./list.txt"
 while IFS= read -r line
 do
-    echo "<option>$line</option>" >> options.txt
+    echo "        <option>$line</option>" >> options.txt
 done < "$input"
 rm list.txt
 
