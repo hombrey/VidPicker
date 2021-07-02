@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/vidPicker/horizstyle.css">
+</head>
+
+<body id="myBody">
+    <img class="fullPage" id="backgroundX" src="../src/vidPicker/img/BG0.png">
+    <video src="../src/vidPicker/img/init.mp4" id="vidPicked" onmouseover="initVidPlayer(this.id)"></video>
+    <div id="directory" style="display:none">./</div>
+    <div class="selector">
+    <select id="filePicker" onchange="switchVid(this.id,directory.id)" size=10>  <!--Call run() function-->
+        <option>1_Gmorning_mMoose.mp4</option>
+        <option>1_Hello-Actions.mp4</option>
+        <option>1_HelloHowAreYou.mp4</option>
+    </select>
+    </div>
+</body> 
+    <script src="../src/vidPicker/functions.js"></script> 
+</html> 
